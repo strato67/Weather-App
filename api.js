@@ -1,4 +1,7 @@
 var search;
+var spl;
+var weather;
+
 function searching(){
     
     
@@ -8,16 +11,27 @@ function searching(){
     .then(response=>response.json())
     .then((out) => {
         var output = JSON.stringify(out)
-        document.getElementById("weather").innerHTML = output;
+        spl = output.split(/[{}]+/);
+        
+        document.getElementById("weather").innerHTML = spl[4];
+        weather = spl[4].split(",");
+        weatherCond();
+        
         console.log(out);
     })
     .catch(err =>{throw err});
 
     
 }
+function weatherCond(){
+    document.getElementById("weather").innerHTML = weather[1];
+}
+
+
 function receiver(){
     search = document.getElementById("city-name").value;
     searching();
+    
 }
     
 
