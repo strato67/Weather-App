@@ -1,0 +1,32 @@
+.grid-container {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+      "cityname"
+      "weathericon"
+      "temp"
+      "feelslike"
+      "search";
+}
+  
+.cityname { grid-area: cityname; }
+  
+.weathericon { grid-area: weathericon; }
+  
+.temp { grid-area: temp; }
+  
+.feelslike { grid-area: feelslike; }
+  
+.search { 
+      grid-area: search;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      text-align: left;
+      transform: translate(-50%, -50%);
+      padding-top: 1%;
+}
+  

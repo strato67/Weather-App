@@ -2,27 +2,41 @@
 
 <head>
     <script src="api.js"></script>
-    
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+
+    <div class="grid-container">
+        <div class="cityname">P</div>
+        <div class="weathericon">
+            <div id="weather-icon"></div>
+        </div>
+        <div class="temp">
+            <p id="temp"></p>
+        </div>
+        <div class="feelslike">
+            <p id="feels-like"></p>
+        </div>
+        <div class="search">
+            <form class="weather-form">
+                <input type="text" placeholder="Enter a city name" id="city-name">
+                <input type="button" value="Search" onclick="searching()">
+        
+            </form>
+        </div>
+      </div>
+
    
-    <p id="temp"></p>
-    <p id="feels-like"></p>
+    
+    
     <p id="hi-low"></p>
     <p id="weather"></p>
-    <div id="weather-icon">
-
-
-    </div>
+    
     <p id="weather-desc"></p>
 
-    <form class="weather-form">
-        <input type="text" placeholder="Enter a city name" id="city-name">
-        <input type="button" value="Search" onclick="searching()">
-
-    </form>
+    
 </body>
 
 
