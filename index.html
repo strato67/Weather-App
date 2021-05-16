@@ -3,28 +3,34 @@
 <head>
     <script src="api.js"></script>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
 </head>
 
 <body>
 
     <div class="grid-container">
-        <div class="cityname">P</div>
+        <div class="cityname">
+            <h1 id="name"></h1>
+
+        </div>
         <div class="weathericon">
             <div id="weather-icon"></div>
         </div>
         <div class="temp">
-            <p id="temp"></p>
+            <h2 id="temp"></h2>
         </div>
         <div class="feelslike">
             <p id="feels-like"></p>
         </div>
         <div class="search">
-            <form class="weather-form">
-                <input type="text" placeholder="Enter a city name" id="city-name">
-                <input type="button" value="Search" onclick="searching()">
+
+            <div class="weather-form input-group mb-3">
+                <input type="text" class="form-control" placeholder="Enter a city name" id="city-name">
+                <input type="button" class="btn btn-outline-secondary" value="Search" onclick="searching()">
         
-            </form>
+            </div>
         </div>
       </div>
 

@@ -18,7 +18,7 @@ function searching(){
         weather = spl[4].split(",");
         weatherCond();
 
-        document.getElementById("temp").innerHTML = spl[6];
+        
         temp = spl[6].split(",");
         temperature();
 
@@ -34,12 +34,14 @@ function searching(){
     
 }
 function weatherCond(){
-    document.getElementById("weather-desc").innerHTML = weather[2];
+    //document.getElementById("weather-desc").innerHTML = weather[2];
+    document.getElementById("weather-desc").innerHTML = spl;
+    document.getElementById("name").innerHTML = spl[13].split(':')[3].split(',')[0].replace(/"/g,"") + ", " +spl[12].split(':')[3].replace(/"/g,"").split(',')[0];
 }
 function temperature(){
-   document.getElementById("temp").innerHTML = Math.round(temp[0].split(':')[1]-273.15) + "\&#176 C";
+   document.getElementById("temp").innerHTML = Math.round(temp[0].split(':')[1]-273.15) + "\&#176C";
    document.getElementById("hi-low").innerHTML = Math.round(temp[3].split(':')[1]-273.15) + "/"+ Math.round(temp[2].split(':')[1]-273.15);
-   document.getElementById("feels-like").innerHTML = Math.round(temp[1].split(':')[1]-273.15) + "\&#176 C";
+   document.getElementById("feels-like").innerHTML = "Feels like: " + Math.round(temp[1].split(':')[1]-273.15) + "\&#176C" + "  |  " + spl[4].split(':')[3].split(',')[0].replace(/"/g,"");
 }
 function weatherIcon(iconID){
     iconID = iconID.replace(/"/g,"");

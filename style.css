@@ -16,9 +16,15 @@
   
 .weathericon { grid-area: weathericon; }
   
-.temp { grid-area: temp; }
+.temp { 
+      grid-area: temp;
+      font-size: 100%;
+ }
   
-.feelslike { grid-area: feelslike; }
+.feelslike { 
+      grid-area: feelslike;
+      text-transform: capitalize;
+ }
   
 .search { 
       grid-area: search;
