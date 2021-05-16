@@ -30,7 +30,7 @@ function searching(){
         console.log(out);
     })
     .catch(err =>
-        document.getElementById("name").innerHTML="Invalid City",
+        document.getElementById("name").innerHTML="Invalid Location",
         document.getElementById("weather-icon").innerHTML="-",
         document.getElementById("feels-like").innerHTML = "-",
         document.getElementById("temp").innerHTML = "-"
