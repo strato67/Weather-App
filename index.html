@@ -4,13 +4,14 @@
     <script src="api.js"></script>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
 </head>
 
 <body>
 
-    <div class="grid-container">
+    <div class="grid-container" id="weather-container">
         <div class="cityname">
             <h1 id="name"></h1>
 
@@ -26,7 +27,7 @@
         </div>
         <div class="search">
 
-            <div class="weather-form input-group mb-3">
+            <div class="weather-form input-group mb-3" >
                 <input type="text" class="form-control" placeholder="Enter a city name" id="city-name">
                 <input type="button" class="btn btn-outline-secondary" value="Search" onclick="searching()">
         
@@ -34,11 +35,13 @@
         </div>
       </div>
 
-   
-    
+      <hr>
+    <!---->
     
     <p id="hi-low"></p>
-    <p id="weather"></p>
+    <p id="pressure"></p>
+    <p id="humidity"></p>
+    <p id="windspeed"></p>
     
     <p id="weather-desc"></p>
 

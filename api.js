@@ -14,7 +14,7 @@ function searching(){
         var output = JSON.stringify(out)
         spl = output.split(/[{}]+/);
         
-        document.getElementById("weather").innerHTML = spl[4];
+        //document.getElementById("weather").innerHTML = spl[4];
         weather = spl[4].split(",");
         weatherCond();
 
@@ -29,18 +29,26 @@ function searching(){
 
         console.log(out);
     })
-    .catch(err =>{throw err});
+    .catch(err =>
+        document.getElementById("name").innerHTML="Invalid City",
+        document.getElementById("weather-icon").innerHTML="-",
+        document.getElementById("feels-like").innerHTML = "-",
+        document.getElementById("temp").innerHTML = "-"
+        
+        );
 
     
 }
 function weatherCond(){
-    //document.getElementById("weather-desc").innerHTML = weather[2];
     document.getElementById("weather-desc").innerHTML = spl;
     document.getElementById("name").innerHTML = spl[13].split(':')[3].split(',')[0].replace(/"/g,"") + ", " +spl[12].split(':')[3].replace(/"/g,"").split(',')[0];
+    document.getElementById("pressure").innerHTML = spl[5];
+    document.getElementById("humidity").innerHTML = ""
+    document.getElementById("windspeed").innerHTML = ""
 }
 function temperature(){
    document.getElementById("temp").innerHTML = Math.round(temp[0].split(':')[1]-273.15) + "\&#176C";
-   document.getElementById("hi-low").innerHTML = Math.round(temp[3].split(':')[1]-273.15) + "/"+ Math.round(temp[2].split(':')[1]-273.15);
+   document.getElementById("hi-low").innerHTML = "High/Low: "+ Math.round(temp[3].split(':')[1]-273.15) + "  |  "+ Math.round(temp[2].split(':')[1]-273.15);
    document.getElementById("feels-like").innerHTML = "Feels like: " + Math.round(temp[1].split(':')[1]-273.15) + "\&#176C" + "  |  " + spl[4].split(':')[3].split(',')[0].replace(/"/g,"");
 }
 function weatherIcon(iconID){
