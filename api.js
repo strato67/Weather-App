@@ -16,10 +16,9 @@ function searching(){
         
         //document.getElementById("weather").innerHTML = spl[4];
         weather = spl[4].split(",");
-        weatherCond();
-
-        
         temp = spl[6].split(",");
+
+        weatherCond();    
         temperature();
 
         
@@ -40,11 +39,11 @@ function searching(){
     
 }
 function weatherCond(){
-    document.getElementById("weather-desc").innerHTML = spl;
+    
     document.getElementById("name").innerHTML = spl[13].split(':')[3].split(',')[0].replace(/"/g,"") + ", " +spl[12].split(':')[3].replace(/"/g,"").split(',')[0];
-    document.getElementById("pressure").innerHTML = spl[5];
-    document.getElementById("humidity").innerHTML = ""
-    document.getElementById("windspeed").innerHTML = ""
+    document.getElementById("pressure").innerHTML = (temp[4].split(':')[1]/10) + " kPA";
+    document.getElementById("humidity").innerHTML = temp[5].split(':')[1] + "%";
+    document.getElementById("windspeed").innerHTML = (spl[8].split(':')[1].split(',')[0]*3.6).toFixed(1) + " km/h";
 }
 function temperature(){
    document.getElementById("temp").innerHTML = Math.round(temp[0].split(':')[1]-273.15) + "\&#176C";

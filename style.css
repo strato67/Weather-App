@@ -1,4 +1,7 @@
 .grid-container {
+      background-color: aliceblue;
+      padding:5%;
+      height: 50%;
       position: fixed;
       top: 40%;
       left: 50%;
@@ -36,4 +39,22 @@
            
       padding-top: 1%;
 }
-  
+
+.info-container {
+      display: grid;
+      top: 80%;
+      justify-items: center;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 0fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "hi-low pressure humidity windspeed";
+    }
+    
+    .hi-low { grid-area: hi-low; }
+    
+    .pressure { grid-area: pressure; }
+    
+    .humidity { grid-area: humidity; }
+    
+    .windspeed { grid-area: windspeed; }
