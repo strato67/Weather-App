@@ -1,5 +1,7 @@
 .grid-container {
-      background-color: aliceblue;
+      background-color: rgba(220, 220, 220, 0.2);
+      border-radius: 6%;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
       padding:5%;
       height: 50%;
       position: fixed;
@@ -19,14 +21,21 @@
       "feelslike"
       "search";
 }
-  
-.cityname { grid-area: cityname; }
+
+.cityname { grid-area: cityname;
+      font-family: "Roboto"; 
+      font-size: 110em;
+      font-weight: bold;
+}
   
 .weathericon { grid-area: weathericon; }
   
 .temp { 
       grid-area: temp;
-      font-size: 100%;
+      
+      font-weight:bold;
+      font-size: 12em;
+      
  }
   
 .feelslike { 
@@ -41,20 +50,50 @@
 }
 
 .info-container {
+      border-radius: 2% 2% 0% 0%;
       display: grid;
-      top: 80%;
+      background-color: rgba(220, 220, 220, 0.2);
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+      position: fixed;
+      left: 50%;
+      padding-top: 3%;
+      width: -webkit-fill-available;
+      height: 20%;
+      justify-content: center;
+      top: 70%;
+      transform: translate(-50%,50%);
       justify-items: center;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 0fr;
-      gap: 0px 0px;
-      grid-template-areas:
-        "hi-low pressure humidity windspeed";
+      gap: 0px 2%;
+      grid-template-areas: "hi-low pressure humidity windspeed";
     }
     
-    .hi-low { grid-area: hi-low; }
+    .hi-low { grid-area: hi-low;
+      font-size: 1.1em;
+      text-align: center;
+      font-family: "Roboto"; 
+      
+ }
     
-    .pressure { grid-area: pressure; }
+    .pressure { grid-area: pressure;
+      font-size: 1.1em;
+      text-align: center;
+      font-family: "Roboto"; 
+ }
     
-    .humidity { grid-area: humidity; }
+    .humidity { grid-area: humidity; 
+      font-size: 1.1em;
+      text-align: center;
+      font-family: "Roboto"; 
+}
     
-    .windspeed { grid-area: windspeed; }
+    .windspeed { grid-area: windspeed;
+      font-size: 1.1em;
+      text-align: center;
+      font-family: "Roboto"; 
+}
+body{
+      background: rgb(255,197,158)!important;
+      background: linear-gradient(0deg, rgba(255,197,158,1) 18%, rgba(0,212,255,1) 100%)!important;
+}

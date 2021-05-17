@@ -47,7 +47,7 @@ function weatherCond(){
 }
 function temperature(){
    document.getElementById("temp").innerHTML = Math.round(temp[0].split(':')[1]-273.15) + "\&#176C";
-   document.getElementById("hi-low").innerHTML = "High/Low: "+ Math.round(temp[3].split(':')[1]-273.15) + "  |  "+ Math.round(temp[2].split(':')[1]-273.15);
+   document.getElementById("hi-low").innerHTML = Math.round(temp[3].split(':')[1]-273.15) + "  |  "+ Math.round(temp[2].split(':')[1]-273.15);
    document.getElementById("feels-like").innerHTML = "Feels like: " + Math.round(temp[1].split(':')[1]-273.15) + "\&#176C" + "  |  " + spl[4].split(':')[3].split(',')[0].replace(/"/g,"");
 }
 function weatherIcon(iconID){
