@@ -1,1 +1,1 @@
-JavaScript weather application, powered by OpenWeatherAPI
+JavaScript weather application, powered by OpenWeatherMap API
